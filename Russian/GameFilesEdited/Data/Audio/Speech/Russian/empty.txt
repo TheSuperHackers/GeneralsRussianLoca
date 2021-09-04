@@ -1,0 +1,3 @@
+This file is here to allow perforce to keep the directory. 
+
+It should be removed before ship

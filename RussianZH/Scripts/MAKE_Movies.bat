@@ -5,4 +5,4 @@ call %ThisDir1%SETUP_Folders.bat
 del /s /f /q %GeneratedReleaseUnpackedDir%\*.bik
 
 :: Copy files
-xcopy /Y /S %GameFilesDir%\*.bik %GeneratedReleaseUnpackedDir%\
+::xcopy /Y /S %GameFilesDir%\*.bik %GeneratedReleaseUnpackedDir%\

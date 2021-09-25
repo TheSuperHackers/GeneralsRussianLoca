@@ -2,7 +2,7 @@ set ThisDir1=%~dp0
 call %ThisDir1%SETUP_Folders.bat
 
 :: Free folders of files
-del /s /f /q %GeneratedReleaseUnpackedDir%\*.bik
+del /f /q /s %GeneratedReleaseUnpackedDir%\*.bik
 
 :: Copy files
-xcopy /Y /S %GameFilesDir%\Data\Russian\Movies\*.bik %GeneratedReleaseUnpackedDir%\Data\Russian\Movies\
+xcopy /y /s %GameFilesDir%\Data\Russian\Movies\*.bik %GeneratedReleaseUnpackedDir%\Data\Russian\Movies\

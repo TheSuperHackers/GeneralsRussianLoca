@@ -32,6 +32,7 @@ call %ThisDir0%Scripts\MAKE_Movies.bat
 call %ThisDir0%Scripts\MAKE_RussianZH.bat
 call %ThisDir0%Scripts\MAKE_SpeechRussianZH.bat
 ::call %ThisDir0%Scripts\MAKE_Splash.bat
+call %ThisDir0%Scripts\MAKE_W3DRussianZH.bat
 
 :: Apply user settings
 call %ThisDir0%SETUP_UserSettings.bat

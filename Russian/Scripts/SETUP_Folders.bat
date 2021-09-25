@@ -10,6 +10,9 @@ set GeneratedBigFilesDir=%ProjectDir%\.Generated\BigFiles
 
 set GeneratedReleaseUnpackedDir=%ProjectDir%\.Generated\ReleaseUnpacked
 
+set SourceLanguage=Russian
+set TargetLanguage=Russian
+
 :: Create folders
 if not exist %ReleaseDir% mkdir %ReleaseDir%
 if not exist %GeneratedBigFilesUnpackedDir% mkdir %GeneratedBigFilesUnpackedDir%

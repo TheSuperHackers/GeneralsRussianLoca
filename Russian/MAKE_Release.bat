@@ -11,7 +11,7 @@ call %ThisDir0%Scripts\MAKE_Splash.bat
 xcopy /Y /S %ReleaseUnpackedDir%\* %GeneratedReleaseUnpackedDir%\*
 
 :: Define archive name(s)
-set ArchiveName=Russian
+set ArchiveName=%TargetLanguage%_v1.0
 
 :: Generate Archive(s)
 tar.exe -a -c -C %GeneratedReleaseUnpackedDir% -f %ReleaseDir%\%ArchiveName%.zip *.*

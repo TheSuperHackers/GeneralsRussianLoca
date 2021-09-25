@@ -2,7 +2,7 @@ set ThisDir1=%~dp0
 call %ThisDir1%SETUP_Folders.bat
 
 :: Define big file name(s)
-set BigName=820_INIRussianZH
+set BigName=820_INI%TargetLanguage%ZH
 
 :: Free folders of big file contents
 del /f /q /s %GeneratedBigFilesUnpackedDir%\%BigName%

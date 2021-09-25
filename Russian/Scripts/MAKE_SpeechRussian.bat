@@ -2,14 +2,14 @@ set ThisDir1=%~dp0
 call %ThisDir1%SETUP_Folders.bat
 
 :: Define big file name(s)
-set BigName=820_SpeechRussian
+set BigName=820_Speech%TargetLanguage%
 
 :: Free folders of big file contents
 del /f /q /s %GeneratedBigFilesUnpackedDir%\%BigName%
 del /f /q    %GeneratedBigFilesDir%\%BigName%.big
 
 :: Copy .big contents
-xcopy /y /s %GameFilesDir%\Data\Audio\Speech\Russian\*.wav %GeneratedBigFilesUnpackedDir%\%BigName%\Data\Audio\Speech\Russian\
+xcopy /y /s %GameFilesDir%\Data\Audio\Speech\%SourceLanguage%\*.wav %GeneratedBigFilesUnpackedDir%\%BigName%\Data\Audio\Speech\%TargetLanguage%\
 
 :: Generate .big file(s)
 %ToolsDir%\GeneralsBigCreator\GeneralsBigCreator.exe -source %GeneratedBigFilesUnpackedDir%\%BigName% -dest %GeneratedBigFilesDir%\%BigName%.big

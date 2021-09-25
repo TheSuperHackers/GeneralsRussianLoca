@@ -11,7 +11,7 @@ call %ThisDir0%Scripts\MAKE_W3DRussianZH.bat
 xcopy /Y /S %ReleaseUnpackedDir%\* %GeneratedReleaseUnpackedDir%\*
 
 :: Define archive name(s)
-set ArchiveName=RussianZH
+set ArchiveName=%TargetLanguage%ZH_v1.0
 
 :: Generate Archive(s)
 tar.exe -a -c -C %GeneratedReleaseUnpackedDir% -f %ReleaseDir%\%ArchiveName%.zip *.*

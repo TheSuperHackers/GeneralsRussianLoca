@@ -8,7 +8,7 @@ call %ThisDir0%Scripts\MAKE_Splash.bat
 call %ThisDir0%Scripts\MAKE_W3DRussianZH.bat
 
 :: Copy base release files
-xcopy /Y /S %ReleaseUnpackedDir%\* %GeneratedReleaseUnpackedDir%\*
+xcopy /y /s %ReleaseUnpackedDir%\* %GeneratedReleaseUnpackedDir%\*
 
 :: Define archive name(s)
 set ArchiveName=%TargetLanguage%ZH_v1.0

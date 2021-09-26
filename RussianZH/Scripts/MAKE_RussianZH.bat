@@ -17,7 +17,7 @@ del /f /q %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\Install
 del /f /q %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\launcher.bmp
 
 :: Compress TGA and PSD to DDS and delete intermediate source copies
-call %ThisDir1%\CrunchTextures.bat %GeneratedBigFilesUnpackedDir%\%BigName%\
+call %ThisDir1%\CrunchTextures.bat %GeneratedBigFilesUnpackedDir%\%BigName:%
 
 :: Generate .big file(s)
 %ToolsDir%\GeneralsBigCreator\GeneralsBigCreator.exe -source %GeneratedBigFilesUnpackedDir%\%BigName% -dest %GeneratedBigFilesDir%\%BigName%.big

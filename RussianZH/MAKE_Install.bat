@@ -25,17 +25,17 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------
 echo on
 
-set ThisDir0=%~dp0
-call %ThisDir0%Scripts\MAKE_AudioRussianZH.bat
-::call %ThisDir0%Scripts\MAKE_INIRussianZH.bat
-call %ThisDir0%Scripts\MAKE_Movies.bat
-call %ThisDir0%Scripts\MAKE_RussianZH.bat
-call %ThisDir0%Scripts\MAKE_SpeechRussianZH.bat
-::call %ThisDir0%Scripts\MAKE_Splash.bat
-call %ThisDir0%Scripts\MAKE_W3DRussianZH.bat
+set ThisDir0="%~dp0."
+call %ThisDir0%\Scripts\MAKE_AudioRussianZH.bat
+::call %ThisDir0%\Scripts\MAKE_INIRussianZH.bat
+call %ThisDir0%\Scripts\MAKE_Movies.bat
+call %ThisDir0%\Scripts\MAKE_RussianZH.bat
+call %ThisDir0%\Scripts\MAKE_SpeechRussianZH.bat
+::call %ThisDir0%\Scripts\MAKE_Splash.bat
+call %ThisDir0%\Scripts\MAKE_W3DRussianZH.bat
 
 :: Apply user settings
-call %ThisDir0%SETUP_UserSettings.bat
+call %ThisDir0%\SETUP_UserSettings.bat
 
 ::Copy release files to game
 xcopy /Y /S %GeneratedReleaseUnpackedDir% %GameRootDir%

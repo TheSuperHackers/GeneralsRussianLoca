@@ -1,11 +1,11 @@
-set ThisDir0=%~dp0
-call %ThisDir0%Scripts\MAKE_AudioRussianZH.bat
-::call %ThisDir0%Scripts\MAKE_INIRussianZH.bat
-call %ThisDir0%Scripts\MAKE_Movies.bat
-call %ThisDir0%Scripts\MAKE_RussianZH.bat
-call %ThisDir0%Scripts\MAKE_SpeechRussianZH.bat
-call %ThisDir0%Scripts\MAKE_Splash.bat
-call %ThisDir0%Scripts\MAKE_W3DRussianZH.bat
+set ThisDir0="%~dp0."
+call %ThisDir0%\Scripts\MAKE_AudioRussianZH.bat
+::call %ThisDir0%\Scripts\MAKE_INIRussianZH.bat
+call %ThisDir0%\Scripts\MAKE_Movies.bat
+call %ThisDir0%\Scripts\MAKE_RussianZH.bat
+call %ThisDir0%\Scripts\MAKE_SpeechRussianZH.bat
+call %ThisDir0%\Scripts\MAKE_Splash.bat
+call %ThisDir0%\Scripts\MAKE_W3DRussianZH.bat
 
 :: Copy base release files
 xcopy /y /s %ReleaseUnpackedDir%\* %GeneratedReleaseUnpackedDir%\*

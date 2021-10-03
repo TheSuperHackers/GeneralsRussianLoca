@@ -1,7 +1,8 @@
 :: Setup work folders
 set ProjectDir="%~dp0.."
 set ToolsDir=%ProjectDir%\..\Tools
-set GameFilesDir=%ProjectDir%\GameFilesEdited
+set GameFilesEditedDir=%ProjectDir%\GameFilesEdited
+set GameFilesOriginalEnglishDir=%ProjectDir%\GameFilesOriginalEnglish
 set ReleaseUnpackedDir=%ProjectDir%\ReleaseUnpacked
 set ReleaseDir=%ProjectDir%\.Release
 
@@ -10,7 +11,6 @@ set GeneratedBigFilesDir=%ProjectDir%\.Generated\BigFiles
 
 set GeneratedReleaseUnpackedDir=%ProjectDir%\.Generated\ReleaseUnpacked
 
-set SourceLanguage=Russian
 set TargetLanguage=Russian
 
 :: Create folders

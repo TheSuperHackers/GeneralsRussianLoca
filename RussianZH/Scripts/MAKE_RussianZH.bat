@@ -9,15 +9,13 @@ del /f /q /s %GeneratedBigFilesUnpackedDir%\%BigName%
 del /f /q    %GeneratedBigFilesDir%\%BigName%.big
 
 :: Copy .big contents
-xcopy /y %GameFilesDir%\Data\%SourceLanguage%\*.*              %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\
-xcopy /y %GameFilesDir%\Data\%SourceLanguage%\Art\Textures\*.* %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\Art\Textures\
-
-:: Discard now obsolete files
-del /f /q %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\Install_Final.bmp
-del /f /q %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\launcher.bmp
+xcopy /y %GameFilesOriginalEnglishDir%\Data\English\*.*              %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\
+xcopy /y %GameFilesOriginalEnglishDir%\Data\English\Art\Textures\*.* %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\Art\Textures\
+xcopy /y %GameFilesEditedDir%\Data\Russian\*.*                       %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\
+xcopy /y %GameFilesEditedDir%\Data\Russian\Art\Textures\*.*          %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\Art\Textures\
 
 :: Compress TGA and PSD to DDS and delete intermediate source copies
-call %ThisDir1%\CrunchTextures.bat %GeneratedBigFilesUnpackedDir%\%BigName:%
+call %ThisDir1%\CrunchTextures.bat %GeneratedBigFilesUnpackedDir%\%BigName%
 
 :: Generate .big file(s)
 %ToolsDir%\GeneralsBigCreator\GeneralsBigCreator.exe -source %GeneratedBigFilesUnpackedDir%\%BigName% -dest %GeneratedBigFilesDir%\%BigName%.big

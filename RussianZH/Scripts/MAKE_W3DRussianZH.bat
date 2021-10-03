@@ -9,7 +9,7 @@ del /f /q /s %GeneratedBigFilesUnpackedDir%\%BigName%
 del /f /q    %GeneratedBigFilesDir%\%BigName%.big
 
 :: Copy .big contents
-xcopy /y %GameFilesDir%\Data\%SourceLanguage%\Art\W3D\*.* %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\Art\W3D\
+xcopy /y %GameFilesOriginalEnglishDir%\Data\English\Art\W3D\*.* %GeneratedBigFilesUnpackedDir%\%BigName%\Data\%TargetLanguage%\Art\W3D\
 
 :: Generate .big file(s)
 %ToolsDir%\GeneralsBigCreator\GeneralsBigCreator.exe -source %GeneratedBigFilesUnpackedDir%\%BigName% -dest %GeneratedBigFilesDir%\%BigName%.big

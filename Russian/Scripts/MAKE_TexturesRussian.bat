@@ -9,7 +9,10 @@ del /f /q /s %GeneratedBigFilesUnpackedDir%\%BigName%
 del /f /q    %GeneratedBigFilesDir%\%BigName%.big
 
 :: Copy .big contents
-xcopy /y /s %GameFilesDir%\Art\Textures\*.tga %GeneratedBigFilesUnpackedDir%\%BigName%\Art\Textures\
+xcopy /y %GameFilesEditedDir%\Art\Textures\*.* %GeneratedBigFilesUnpackedDir%\%BigName%\Art\Textures\
+
+:: Compress TGA and PSD to DDS and delete intermediate source copies
+call %ThisDir1%\CrunchTextures.bat %GeneratedBigFilesUnpackedDir%\%BigName%
 
 :: Generate .big file(s)
 %ToolsDir%\GeneralsBigCreator\GeneralsBigCreator.exe -source %GeneratedBigFilesUnpackedDir%\%BigName% -dest %GeneratedBigFilesDir%\%BigName%.big

@@ -27,15 +27,14 @@ echo on
 
 set ThisDir0="%~dp0."
 call %ThisDir0%\Scripts\MAKE_AudioRussian.bat
-::call %ThisDir0%\Scripts\MAKE_INIRussian.bat
 call %ThisDir0%\Scripts\MAKE_Movies.bat
 call %ThisDir0%\Scripts\MAKE_Russian.bat
 call %ThisDir0%\Scripts\MAKE_SpeechRussian.bat
-::call %ThisDir0%\Scripts\MAKE_Splash.bat
-::call %ThisDir0%\Scripts\MAKE_TexturesRussian.bat
+call %ThisDir0%\Scripts\MAKE_Splash.bat
+call %ThisDir0%\Scripts\MAKE_TexturesRussian.bat
 
 :: Apply user settings
 call %ThisDir0%\SETUP_UserSettings.bat
 
 ::Copy release files to game
-xcopy /Y /S %GeneratedReleaseUnpackedDir% %GameRootDir%
+xcopy /y /s %GeneratedReleaseUnpackedDir% %GameRootDir%
